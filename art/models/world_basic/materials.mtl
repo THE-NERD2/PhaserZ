@@ -1,0 +1,4 @@
+# Created using Meshport (https://github.com/random-geek/meshport).
+
+newmtl mcl_copper_block.png
+map_Kd mcl_copper_block.png
