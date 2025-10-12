@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ciknxnoae0wcx"]
+
+[ext_resource type="Script" uid="uid://c6sdg7sb0s7ko" path="res://scenes/Main/ui.gd" id="1_br8qb"]
+[ext_resource type="Script" uid="uid://cm5c18ypc33wc" path="res://scenes/Main/start_button.gd" id="2_px18m"]
+
+[node name="Main" type="FlowContainer"]
+offset_right = 46.0
+offset_bottom = 55.0
+script = ExtResource("1_br8qb")
+
+[node name="WorldOption" type="OptionButton" parent="."]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 2
+text = "Start"
+script = ExtResource("2_px18m")
