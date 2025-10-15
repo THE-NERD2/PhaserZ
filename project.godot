@@ -15,6 +15,10 @@ run/main_scene="uid://ciknxnoae0wcx"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+SettingsHandler="*res://scripts/SettingsHandler.cs"
+
 [dotnet]
 
 project/assembly_name="PhaserZ"
