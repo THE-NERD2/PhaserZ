@@ -37,6 +37,11 @@ public abstract partial class Ship : RigidBody3D
 			}
 			// TODO: roll
 
+			if(SettingsHandler.GetSetting("PlayerControlSettings.RotationDamping").AsBool() && torque == Vector3.Zero)
+			{
+				torque = -AngularVelocity.Normalized();
+			}
+
 			var rotation = GlobalBasis;
 			var absoluteForce = rotation * force * Thrust;
 			var absoluteTorque = rotation * torque * Turn;

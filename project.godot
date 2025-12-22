@@ -23,6 +23,10 @@ SettingsHandler="*res://scripts/SettingsHandler.cs"
 
 project/assembly_name="PhaserZ"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
+
 [input]
 
 thrust_forward={
