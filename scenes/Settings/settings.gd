@@ -1,12 +1,13 @@
 extends Node
 
 func _ready():
-	var file = FileAccess.open("user://settings.json", FileAccess.READ)
-	var settings = JSON.parse_string(file.get_as_text())
-	for setting in settings.keys():
-		var setting_path = setting.split(".")
-		get_node("%s/VBoxContainer/%s/CheckButton" % [setting_path[0], setting_path[1]]).button_pressed = settings[setting]
-	file.close()
+	if FileAccess.file_exists("user://settings.json"):
+		var file = FileAccess.open("user://settings.json", FileAccess.READ)
+		var settings = JSON.parse_string(file.get_as_text())
+		for setting in settings.keys():
+			var setting_path = setting.split(".")
+			get_node("%s/VBoxContainer/%s/CheckButton" % [setting_path[0], setting_path[1]]).button_pressed = settings[setting]
+		file.close()
 func save_settings():
 	var settings = {}
 	for setting_group in get_children():
